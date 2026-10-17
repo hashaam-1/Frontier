@@ -1,0 +1,59 @@
+{
+  "name": "my-channel",
+  "label": "My Channel",
+  "description": "Describe the channel in one line. Claude fills the rest from your brief.",
+  "tagline": "One short line for the channel card in the app.",
+  "points": [
+    "3 to 5 short bullets for the card: what the videos are made of",
+    "one idea per bullet, a few words each"
+  ],
+  "script_craft": "auto — or \"story\" (someone else's story: documentary, history, mystery) / \"teaching\" (the viewer learns or gets a result) / \"off\" (only your own prompts)",
+  "language": "English",
+  "voice": {
+    "provider": "algrow",
+    "engine": "elevenlabs",
+    "voice_id": "",
+    "note": "Pick a voice at go.algrow.online/tool and paste its id here. engine: elevenlabs (thousands of voices), stealth, or minimax (your own clones). List them with make_video.algrow_voices()."
+  },
+  "look": {
+    "title_font": "'Inter Display Black','Inter Black',Inter,sans-serif",
+    "title_weight": "900",
+    "accent": [
+      "#C9B896",
+      "#B5544A",
+      "#7D9A86",
+      "#8B7355",
+      "#A89880"
+    ],
+    "warn": "#B5544A",
+    "good": "#7D9A86",
+    "skins": [
+      "collage_dark",
+      "collage_dark",
+      "noir"
+    ],
+    "caption_accent": "&H96B8C9&",
+    "footage_grade": "eq=brightness=-0.06:saturation=0.62:contrast=1.10,colortemperature=temperature=5200",
+    "ground": "",
+    "people_dir": ""
+  },
+  "pacing": {
+    "graphic_every_min": 0.5,
+    "graphic_ratio": 0.35,
+    "graphic_dur_s": 6.0,
+    "graphic_max_s": 10.0,
+    "white_fade": 0.45
+  },
+  "stock_queries": [
+    "<< Claude writes these from your niche >>"
+  ],
+  "prompts": {
+    "outline": "<< Claude writes this from your brief >>",
+    "script": "<< Claude writes this from your brief >>"
+  },
+  "thumbnail": {
+    "brief": "<< Show Claude 5 thumbnails from your niche and it fills this in. Composition, palette, typography, recurring subject, what the face or object is doing, where the text sits. >>",
+    "accent": "",
+    "note": "Leave the brief empty and thumbnails still generate — they just follow the channel description instead of a proven layout."
+  }
+}

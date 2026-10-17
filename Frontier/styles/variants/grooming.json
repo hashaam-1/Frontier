@@ -1,0 +1,111 @@
+{
+  "name": "grooming",
+  "variant_of": "documentary",
+  "match": "practical men's grooming and style how-tos: hair, haircuts, curly hair, beards, skincare, fragrance, outfits, a routine the viewer follows step by step",
+  "order": 5,
+  "label": "Men's Grooming How-To",
+  "description": "Clear, friendly how-to videos for men's hair and grooming: real routine footage, clean step cards, 'tell your barber' tip cards with highlighted words, the products flying in.",
+  "script_craft": "teaching",
+  "cost": "about $0.30 per minute of video",
+  "render_x": 3.5,
+  "language": "English",
+  "voice": {
+    "provider": "algrow",
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "chunk_chars": 900,
+    "voice_id": "iP95p4xoKVk53GoZ742B",
+    "voice_name": "Chris — Charming, Down-to-Earth",
+    "wavespeed_voice": "Chris",
+    "note": "A premade ElevenLabs voice: natural, friendly, easy to follow."
+  },
+  "features": {
+    "offered": [
+      "youtube",
+      "stock",
+      "ai_images",
+      "depth",
+      "objects",
+      "motion",
+      "spotlight",
+      "sound"
+    ],
+    "on": [
+      "youtube",
+      "stock",
+      "objects",
+      "motion",
+      "sound"
+    ],
+    "prefer": "youtube"
+  },
+  "look": {
+    "graphics": "documentary",
+    "title_font": "'Doc Sans','Roboto Condensed',sans-serif",
+    "title_weight": "700",
+    "accent": [
+      "#FFE14D",
+      "#F5F5F5",
+      "#5E6064",
+      "#2B2D31"
+    ],
+    "warn": "#FF5A4E",
+    "good": "#7BD389",
+    "skins": [
+      "noir"
+    ],
+    "caption_accent": "&H4DE1FF&",
+    "captions": {
+      "font": "Roboto Condensed",
+      "size": 50,
+      "upper": false,
+      "karaoke": false,
+      "outline": 0.8,
+      "shadow": 0.8,
+      "line_chars": 42
+    },
+    "footage_grade": "eq=contrast=1.03:saturation=1.02",
+    "dust": false,
+    "vignette": false,
+    "leak": false,
+    "encode": {
+      "preset": "medium",
+      "tune": "film",
+      "crf": 19
+    },
+    "options_note": "How-to videos: real routine footage, step cards, tip cards and the products themselves.",
+    "photofx": {
+      "every_s": 12,
+      "gap_s": 2
+    },
+    "director": true
+  },
+  "pacing": {
+    "graphic_every_min": 0.75,
+    "graphic_ratio": 0.3,
+    "graphic_dur_s": 6.0,
+    "graphic_max_s": 9.0,
+    "cold_open_s": 0,
+    "white_fade": 0.0,
+    "punch": false,
+    "wpm": 145,
+    "cut_s": 3.0,
+    "scene_share_hook": 0.55,
+    "scene_share_body": 0.45
+  },
+  "stock_queries": [
+    "man washing curly hair",
+    "man applying hair cream",
+    "curly hair man mirror",
+    "barber cutting curly hair"
+  ],
+  "prompts": {
+    "outline": "You are the head writer of a men's grooming YouTube channel: friendly, practical, no fluff.\n\nTITLE: [INSERT TITLE HERE]\nLENGTH: [INSERT LENGTH — e.g., 15 minutes, 20 minutes, 25 minutes]\n\nPlan the video as numbered steps or items. Beat 1 names the problem the viewer has and promises the fix. Every step says what to do, why it works and how (products by type, amounts, when). Where it helps, the exact words to tell a barber. The last beat sums it up.",
+    "script": "Write the complete narration from the plan below.\n\nTHE PLAN:\n[INSERT OUTLINE HERE]\n\nHOW IT SOUNDS\n- A friendly barber-mate talking straight to \"you\": short, clear sentences, practical, confident.\n- Open on the problem in one line, then the promise. Say \"Step one\", \"Step two\"... for each step.\n- Name product types, not brands; no medical claims.\n- Plain spoken text only: no headings, no lists, no emojis.\n- End with a one-line summary."
+  },
+  "thumbnail": {
+    "brief": "A man with great curly hair, clean grey background, bold white title words with one yellow word.",
+    "accent": "#FFE14D",
+    "note": ""
+  }
+}

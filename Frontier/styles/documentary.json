@@ -1,0 +1,118 @@
+{
+  "name": "documentary",
+  "order": 1,
+  "label": "Documentary",
+  "description": "Real stories told like a streaming documentary: real YouTube footage of the actual events, map animations, real newspaper headlines, real photos and objects, Vox-style collage scenes and quiet, premium graphics. No stock footage, no AI pictures.",
+  "tagline": "Real stories, told like a streaming documentary.",
+  "points": [
+    "Real YouTube footage",
+    "Maps and real headlines",
+    "Real photos and objects",
+    "Vox-style collage scenes",
+    "Graphics and sound design",
+    "No stock footage, no AI images"
+  ],
+  "script_craft": "story",
+  "cost": "about $0.50 per minute of video",
+  "render_x": 3.5,
+  "language": "English",
+  "voice": {
+    "provider": "algrow",
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "chunk_chars": 900,
+    "voice_id": "MFZUKuGQUsGJPQjTS4wC",
+    "voice_name": "Jon — Warm & Grounded Storyteller",
+    "wavespeed_voice": "Brian",
+    "note": "A public voice from the ElevenLabs library, so a documentary renders out of the box. Multilingual v2 keeps one steady narrator for the whole video (v3 is more expressive but can drift to another voice mid-video). For a deeper narrator, ask Claude Code to list voices and swap the id; wavespeed_voice is the voice used when WaveSpeed speaks instead of Algrow."
+  },
+  "features": {
+    "offered": [
+      "youtube",
+      "stock",
+      "ai_images",
+      "depth",
+      "objects",
+      "motion",
+      "vox",
+      "maps",
+      "spotlight",
+      "headlines",
+      "sound"
+    ],
+    "on": [
+      "youtube",
+      "objects",
+      "motion",
+      "vox",
+      "maps",
+      "spotlight",
+      "headlines",
+      "sound"
+    ],
+    "prefer": "youtube"
+  },
+  "look": {
+    "graphics": "documentary",
+    "title_font": "'EB Garamond', Georgia, serif",
+    "title_weight": "500",
+    "accent": [
+      "#E3B25B",
+      "#F3EEE4",
+      "#9DB1BA",
+      "#C4553F"
+    ],
+    "warn": "#C4553F",
+    "good": "#7FA58F",
+    "skins": [
+      "noir"
+    ],
+    "caption_accent": "&H5BB2E3&",
+    "captions": {
+      "font": "Roboto Condensed",
+      "size": 46,
+      "upper": false,
+      "karaoke": false,
+      "outline": 0.5,
+      "shadow": 0.6,
+      "line_chars": 48
+    },
+    "footage_grade": "eq=contrast=1.04:saturation=0.94:gamma=0.99",
+    "dust": false,
+    "vignette": false,
+    "leak": false,
+    "encode": {
+      "preset": "medium",
+      "tune": "film",
+      "crf": 19
+    },
+    "options_note": "Documentary videos are built from real things: YouTube footage first, then maps, headlines, real photos, real objects, Vox collage scenes and premium graphics. Stock footage and AI pictures are off — tick them if you want them as a fallback.",
+    "photofx": {
+      "every_s": 25,
+      "gap_s": 3
+    },
+    "reference": "styles/documentary.jpg",
+    "sample": "brand/1965 Lotus 38 - Documentary sample.mp4",
+    "director": true
+  },
+  "pacing": {
+    "graphic_every_min": 0.75,
+    "graphic_ratio": 0.3,
+    "graphic_dur_s": 6.0,
+    "graphic_max_s": 9.0,
+    "cold_open_s": 0,
+    "white_fade": 0.0,
+    "punch": false,
+    "wpm": 120
+  },
+  "stock_queries": [],
+  "prompts": {
+    "outline": "You are the head writer of a documentary YouTube channel in the tradition of the best streaming documentaries and of Johnny Harris and Vox: real events, real people, told as a story you cannot stop watching.\n\nTITLE: [INSERT TITLE HERE]\nLENGTH: [INSERT LENGTH — e.g., 15 minutes, 20 minutes, 25 minutes]\n\nPlan the episode in plain prose, as numbered beats of about one minute each, in causal or chronological order.\n- Everything is real: real people, real places, real dates, real numbers, real companies. Use only facts you are certain of. Where sources disagree, plan the widely cited round figure with \"around\", or the range.\n- Beat 1 is a cold open: drop the viewer into the most dramatic real moment of the story — a date, a place, a number — then pull back to how it came to that.\n- Every beat is anchored to things a camera, a map or an archive can SHOW: a named person, a place, a date, a building, a product, a document, a headline that ran in a real newspaper. Footage of the real event is found for these, so name them precisely (\"the 1985 New Coke press conference\", \"Chernobyl control room\").\n- Name the people and say exactly what each of them did and when.\n- Build tension: every few beats a turn, a question the viewer wants answered, and the answer a beat later.\n- The last beat lands the consequence as a fact or a number, and returns to the image of the cold open.\nFor each beat, write the facts it states and the concrete things on screen that prove them.",
+    "script": "Write the complete narration for this documentary from the plan below.\n\nTHE PLAN:\n[INSERT OUTLINE HERE]\n\nHOW IT SOUNDS\n- A calm, confident narrator. Short declarative sentences, mostly present tense for the story, past tense for background. Fragments are welcome at turning points: \"Two shots.\" \"Nobody told the driver.\"\n- The first words are the cold open: a date, a place or a number, in the middle of the most dramatic moment.\n- Every sentence carries something concrete: a name, a place, a date, a number, an object — something the edit can show.\n- Real facts only. No invented quotes, no invented figures; disputed figures are rounded and said with \"around\".\n- Plain spoken text only: no headings, no stage directions, no speaker labels, no quotation marks around dialogue, no lists.\n- Write dates and numbers the way a narrator reads them aloud (\"June 28th, 1914\", \"twenty million dollars\"), never digits or symbols.\n- Every minute or two, a question the viewer wants answered, answered soon after.\n- Never say \"in this video\". End on the consequence, back at the image of the cold open; then one short line asking viewers to subscribe for the next story."
+  },
+  "thumbnail": {
+    "brief": "A real, dramatic moment from the story as a cinematic documentary still: the real place, object or person at the turning point, deep contrast, natural colour, one warm light source, strong subject silhouette. Two to four words of headline in a clean condensed sans, cream white, with one word in warm gold. No stickers, no arrows, no cartoon.",
+    "accent": "#E3B25B",
+    "note": "Send Claude five thumbnails you wish were yours and ask it to rewrite this brief."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "name": "stories",
+  "label": "2D Stories — one decision, ten years",
+  "description": "Second-person money stories told over years, drawn as flat 2D cartoons with one recurring main character, the same face and clothes in every frame. Replace the cast and the art direction with your own.",
+  "tagline": "Second-person money stories, told over the years.",
+  "points": [
+    "Flat 2D cartoon pictures",
+    "One recurring character",
+    "Depth pop on people and cars",
+    "Figures on phones and bills",
+    "Swap in your own cast and art"
+  ],
+  "script_craft": "story",
+  "language": "English",
+  "voice": {
+    "provider": "algrow",
+    "engine": "elevenlabs",
+    "voice_id": "MFZUKuGQUsGJPQjTS4wC",
+    "voice_name": "Jon — Warm & Grounded Storyteller"
+  },
+  "look": {
+    "title_font": "Inter Display Black",
+    "title_weight": "900",
+    "accent": [
+      "#F2C14E",
+      "#E8E5DF",
+      "#4F8A6B",
+      "#C4553F"
+    ],
+    "warn": "#C4553F",
+    "good": "#4F8A6B",
+    "skins": [
+      "paper_light",
+      "paper_light",
+      "noir"
+    ],
+    "caption_accent": "&H4EC1F2&",
+    "footage_grade": "",
+    "character": "THE MAIN CHARACTER is the man from the reference image, and he is in EVERY frame:\nearly thirties, short messy dark-brown hair, a simple flat cartoon face with small dark eyes and thin\neyebrows, pale skin, a plain dark-grey crew-neck t-shirt, dark navy trousers, grey socks at home or plain\ndark shoes outside, a thin wedding ring on his left hand. Always this exact man, drawn exactly this way.\nIn a close-up he is still there — his hand and grey sleeve holding the phone, his shoulder in the\nforeground as he looks out of the window.\nAnyone else who returns in the story keeps the same face, hair and clothes every time.",
+    "still_suffix": " Flat 2D cartoon illustration, clean confident line art, soft cel shading, muted natural palette, everyday American home, office and street settings, honest light, 16:9. Text appears only when it is itself the subject of the shot — a figure on a phone screen, a price sticker, a note on the fridge — and exactly as the prompt spells it. No captions, no watermark, no logo.",
+    "zoom": "alternate",
+    "captions": {
+      "size": 84,
+      "upper": true,
+      "outline": 1.35,
+      "line_chars": 34
+    },
+    "ground": "",
+    "people_dir": "",
+    "reference": "styles/stories.jpg",
+    "sample": "brand/POV Paid-Off Civic - 2D Stories sample.mp4",
+    "character_image": "characters/stories.png",
+    "placement": "story",
+    "scene_prompt": "You are the storyboard artist for a 2D story video on a faceless YouTube channel.\n\nCHANNEL: [INSERT CHANNEL HERE]\n\nBelow is the narration. Draw [INSERT COUNT HERE] consecutive frames, about one for every five or six\nseconds of narration, covering it from its first line to its last, so that each frame shows EXACTLY\nwhat the viewer is hearing at that moment.\n\nTHE MAIN CHARACTER is in every frame. The image model is handed a reference picture of them, so in\nevery prompt name them the way THE CAST below does (\"the man from the reference image\") and never give\nthem a different face, hair or clothes. In a close-up they are still there: their hand, their sleeve,\ntheir shoulder in the foreground.\n\nBE SPECIFIC — the frame shows the precise thing the line names:\n- A sum of money: a phone or bank screen showing that exact figure, big enough to read at a glance —\n  the phone fills most of the frame and the figure is the largest thing on it, e.g. a banking app\n  with \"-$480.00\" in red under \"Midas Auto Repair\", a thumb beside it.\n- A car: that exact make and model, seen from behind with the badge readable, and the number that\n  was spoken shown where it naturally lives — the year on a dealer sticker in the rear window, the\n  mileage on the odometer, the price on a windshield sign, the monthly payment on a phone.\n- A place and an hour: that place at that time — \"6:15 on a Saturday\" is the kitchen in early light\n  with the oven clock reading 6:15.\n- A bill, a letter, a message, a sign: its words and numbers spelled exactly as the narration says them.\n- Every figure sits on the thing it belongs to, exactly as the sentence says. In \"she leased a new\n  SUV, your repair cost two hundred\", the two hundred is on YOUR repair bill — never on her SUV.\n  Before you answer, check each figure you put in a frame against its sentence.\n- A named person: the same face and clothes every time they come back.\n\nBE A STORYTELLER, NOT A STOCK LIBRARY:\n- Frames follow each other like a comic. Set a place up, then use it: if the neighbour's truck\n  matters in the next line, it is already parked in the driveway, seen through the window over the\n  sink, in this one.\n- Vary the shot the way an editor would: the wide room, over the shoulder, close on the hands, the\n  other person's reaction, the object on its own with a hand reaching for it.\n- Every composition is new. Never repeat a frame, never reuse a layout two frames in a row.\n- Never illustrate an idea with a symbol (no scales, no arrows, no light bulbs, no piggy banks).\n  Show the real moment.\n- Describe the scene, not the art style — one flat 2D look is added to every prompt for you.\n\nReturn ONLY a JSON array of [INSERT COUNT HERE] objects, in narration order. Laid end to end, the\n\"text\" fields are the narration itself, with nothing skipped:\n\n  {\"text\": \"<the narration this frame covers, COPIED WORD FOR WORD from the script>\",\n   \"prompt\": \"<a complete image prompt: the shot, the main character from the reference image doing\n              what the line says, the specific objects and figures, the setting, the time of day,\n              the light>\"}\n\nSCRIPT:\n[INSERT SCRIPT HERE]",
+    "dust": false,
+    "vignette": false,
+    "encode": {
+      "preset": "slow",
+      "tune": "animation",
+      "crf": 18
+    }
+  },
+  "pacing": {
+    "graphic_every_min": 4.0,
+    "graphic_ratio": 0.06,
+    "graphic_dur_s": 6.0,
+    "graphic_max_s": 8.0,
+    "white_fade": 0.38,
+    "mix": [
+      100,
+      0,
+      0
+    ],
+    "graphics": false,
+    "photo_every_s": 5.5
+  },
+  "stock_queries": [],
+  "prompts": {
+    "outline": "You plan one episode of a story channel.\n\nCHANNEL: [INSERT CHANNEL HERE]\n\nTITLE: [INSERT TITLE HERE]\nThis channel tells ONE person's story in the second person — \"you\" are the one living it —\nabout an ordinary decision that compounds over years. Money, work, a habit, a family choice.\nNo fantasy, no villains, no lecture.\n\nPlan it as LEVELS: a cold open, then the levels, then a closing that returns to the opening\nscene changed. Use about one level per three minutes of narration — three levels for a short\nepisode, six or seven for a long one — and say how many you chose. Give me, in plain prose:\n\n1. THE CAST. The narrator (referred to as \"you\"), and 3-5 named people who recur: someone\n   close (partner, sibling), someone doing the opposite and doing fine, a quiet older figure\n   who says the one sentence that starts everything, and one person whose situation looks\n   better from outside. One line each: name, age, job, and what they represent. Never a\n   villain — the people going the other way are decent and often happier in the moment.\n2. THE NUMBER ARC. The concrete figures the story runs on and how they move: the starting\n   number, what it costs per month, what changes, the balance at each level, the final\n   figure. They must add up — this channel's viewers do the arithmetic.\n3. THE LEVELS. For each: its title (\"Level three, the renovation everyone else got\"), the\n   scene it opens on, what happens, and which number moves.\n4. THE SETBACK. One thing that goes wrong at the worst time and what it costs, so the system\n   is seen bending without breaking.\n5. THE CLOSING MIRROR. The same place and hour as the cold open, what is different and what\n   is deliberately unchanged.\n\nProse only, no markdown, no bullet symbols.",
+    "script": "You write the narration for one episode of a story channel.\n\nCHANNEL: [INSERT CHANNEL HERE]\nTITLE: [INSERT TITLE HERE]\n\nPlain text only — no headings,\nno stage directions, no speaker labels, nothing that is not spoken aloud.\n\nTHE PLAN:\n[INSERT OUTLINE HERE]\n\nHOW THIS CHANNEL SOUNDS\n- SECOND PERSON, PRESENT TENSE. \"It's 6:15 on a Saturday morning and you're standing in\n  your kitchen in socks.\" The viewer is the one living it.\n- Open cold on one exact moment: the hour, the room, what is in your hands, and ONE number\n  written on something physical. Then the contrast standing two doors down.\n- Every claim carries a figure, and the figures agree with each other from the first minute\n  to the last. Say them the way a person says them out loud.\n- Announce EVERY level out loud as you reach it, in order, starting at \"Level one\" — never\n  skip one, and never start at Level two. Short episode, fewer levels; each one still named.\n- Say every figure the way a person says it aloud — \"sixty-one thousand dollars\", \"eleven\n  hundred a month\" — never as digits or currency symbols. The voice has to read it.\n- Name the people and bring them back. The one sentence that starts everything is said\n  plainly by someone who is not trying to teach you anything.\n- Nobody is a fool. The neighbour with the bigger mortgage is generous and happy; the\n  coworker with the credit card is not stupid, she built her life around convenience. Say\n  so out loud. Superiority kills this channel.\n- The wins are quiet. No fireworks, no confetti, no speech. A page refreshes and shows zero.\n- One thing goes wrong at the worst possible time, and the plan bends instead of breaking.\n- The last level is NOT the ending. After it, write a closing scene that returns to the exact\n  place and hour of the cold open — same room, same clothes, the same object in your hands —\n  and name what is different and what is deliberately unchanged. This scene is required; a\n  script that stops on the last level is unfinished.\n- Only then, two final sentences: ask for a like and a subscribe, and ask ONE genuine question\n  about what they would have done, saying plainly where to answer it — \"tell me in the\n  comments\".\n\nNEVER: quotation marks around dialogue, bullet points, headings, \"in this video\", moral\nlessons stated as advice, or numbers that contradict an earlier number."
+  },
+  "thumbnail": {
+    "brief": "A single illustrated moment from the story in the same flat 2D cartoon style: the blank-white-faced narrator calm in the middle of the frame, and the people around him reacting — whispering, staring, holding a phone. Everyday setting, daylight, no text.",
+    "accent": "#F2C14E",
+    "note": "Send Claude five thumbnails you wish were yours and ask it to rewrite this brief."
+  },
+  "order": 3,
+  "cost": "about $0.15 per minute of video",
+  "features": {
+    "offered": [
+      "depth"
+    ],
+    "on": [
+      "depth"
+    ]
+  }
+}
